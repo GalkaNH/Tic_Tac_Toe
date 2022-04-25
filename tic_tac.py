@@ -3,7 +3,6 @@ from tkinter import messagebox
 import time
 import random
 
-
 tk = Tk()
 app_running = True
 
@@ -67,8 +66,8 @@ def draw_point(x, y, type):
         color = "red"
         id = canvas.create_oval(x*step_x, y*step_y, x *
                                 step_x + step_x, y*step_y + step_y, fill=color)
-        id2 = canvas.create_oval(
-            x*step_x+size, y*step_y+size, x*step_x + step_x-size, y*step_y + step_y-size, fill="white")
+        id2 = canvas.create_oval(x*step_x+size, y*step_y+size, x *
+                                 step_x + step_x-size, y*step_y + step_y-size, fill="white")
         list_ids.append(id)
         list_ids.append(id2)
     if type == 1:
@@ -111,7 +110,8 @@ def button_press():
     points = [[-1 for i in range(size_x)] for i in range(size_x)]
 
 
-b1 = Button(tk, text="Spróbuj jeszcze raz!", command=button_press)
+b1 = Button(tk, text="Spróbuj jeszcze raz!",
+            width=15, height=3, bg="#C8C8C7", command=button_press)
 b1.pack()
 
 
